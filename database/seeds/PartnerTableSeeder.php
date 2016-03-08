@@ -22,7 +22,7 @@ class PartnerTableSeeder extends Seeder
 	    		'name'		=> $faker->firstName,
 	    		'address'	=> $faker->secondaryAddress,
 	    		'city'		=> $faker->cityPrefix,
-	    		'e-mail'	=> $faker->unique()->email,
+	    		'mail'	    => $faker->unique()->email,
 	    		'phone'		=> $faker->phoneNumber,
 	    		'zip'		=> $faker->swiftBicNumber,
 	    		'razon_s'	=> $faker->firstName,

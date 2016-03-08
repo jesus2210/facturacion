@@ -17,7 +17,7 @@ class CreatePartnerTable extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('city');
-            $table->string('e-mail');
+            $table->string('mail');
             $table->string('phone');
             $table->string('zip');
             $table->string('razon_s');

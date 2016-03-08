@@ -13,7 +13,7 @@ class PartnersController extends Controller
     public function getIndex()
     {
     	$result = \DB::table('partners')
-    	->select('name','address', 'e-mail')
+    	->select('name','address', 'mail')
     	->orderBy('name', 'ASC')
     	->get();
 //    	dd($result);

@@ -1,12 +1,31 @@
 @extends('base')
 @section('content')
-<div class="panel panel-default">
-  <div class="panel-body">
-    Basic panel example
-  </div>
-@foreach ($result as $resu)
-    <p>{{ $resu->name }}</p>
-@endforeach
-
+<div class="row">
+	<div class="table-responsive">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Direccion</th>
+						<th>E-mail</th>
+					</tr>
+				</thead>
+				<tbody>
+			@foreach ($result as $resu)
+				<tr>
+					<td>
+						{{$resu->name}}
+					</td>
+					<td>
+						{{$resu->address}}
+					</td>
+					<td>
+						{{$resu->mail}}
+					</td>
+				</tr>
+				@endforeach
+				</tbody>
+			</table>
+	</div>
 </div>
 @endsection
