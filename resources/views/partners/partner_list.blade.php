@@ -27,3 +27,6 @@
 			</table>
 	</div>
 @endsection
+
+<a href="#tm-top-d" data-uk-smooth-scroll="{offset: 70}" style="position: fixed;bottom:20px;right: 20px;"><h1><i class="glyphicon glyphicon-plus-sign "></i></h1></a>
+

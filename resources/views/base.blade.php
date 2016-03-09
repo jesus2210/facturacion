@@ -4,6 +4,9 @@
 	<title></title>
 	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="{{ URL::asset('bower_components/angular/angular.js') }}"></script>
+
+
   <style type="text/css">
   #navbar  a {
     color: white;
@@ -40,7 +43,6 @@
               </ul>
             </li>
           </ul>
-          
         </div>
    </div>
 </nav>
