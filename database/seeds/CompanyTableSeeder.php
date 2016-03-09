@@ -2,8 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Faker\Factory as faker;
-
-class PartnerTableSeeder extends Seeder
+class CompanyTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,20 +11,22 @@ class PartnerTableSeeder extends Seeder
      */
     public function run()
     {
-
-
-        // $this->call(UsersTableSeeder::class);
-    	$faker = Faker::create();
+        //
+        $faker = Faker::create();
     	for ($i = 0; $i < 30; $i ++ )
    		{ 		
-	    	\DB::table('partners')->insert(array(
+	    	\DB::table('companies')->insert(array(
 	    		'name'		=> $faker->firstName,
 	    		'address'	=> $faker->secondaryAddress,
+	    		'street'	=> $faker->secondaryAddress,
+	    		'street2'	=> $faker->secondaryAddress,
 	    		'city'		=> $faker->cityPrefix,
+	    		'state'		=> $faker->cityPrefix,
+	    		'country'	=> $faker->cityPrefix,
 	    		'email'	    => $faker->unique()->email,
 	    		'phone'		=> $faker->phoneNumber,
-	    		'zip'		=> $faker->swiftBicNumber,
-	    		'razon_s'	=> $faker->firstName,
+	    		'tax'		=> $faker->swiftBicNumber,
+	    		'fax'		=> $faker->phoneNumber,
 	    		));
     	 }
     }
