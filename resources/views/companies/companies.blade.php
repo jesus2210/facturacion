@@ -5,7 +5,8 @@
 				<thead>
 					<tr>
 						<th>Nombre</th>
-						<th>Direccion</th>
+						<th>Pais</th>
+						<th>Tax</th>
 						<th>E-mail</th>
 					</tr>
 				</thead>
@@ -16,7 +17,10 @@
 						{{$resu->name}}
 					</td>
 					<td>
-						{{$resu->address}}
+						{{$resu->country}}
+					</td>
+					<td>
+						{{$resu->tax}}
 					</td>
 					<td>
 						{{$resu->email}}

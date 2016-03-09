@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 Route::controllers([
-	'partners'	=> 'partner\PartnersController',]);
+	'partners'	=> 'partner\PartnersController',
+	'companies'	=> 'companies\CompaniesController']);
 
 
 /*
