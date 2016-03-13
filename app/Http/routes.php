@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::controllers([
 	'partners'	=> 'partner\PartnersController',]);
+Route::get('partnersList', 'partner\PartnersController@getAllPartner');
+
 
 
 /*

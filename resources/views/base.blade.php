@@ -2,10 +2,10 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/><!-- Se carga bootstrap Framework (La librería) -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="{{ URL::asset('bower_components/angular/angular.js') }}"></script>
-
+  <script type="text/javascript" src="{{ URL::asset('bower_components/angular/angular.js') }}"></script><!-- Se carga angular Framework (La librería) -->
+  <script type="text/javascript" src="{{ URL::asset('js/mainApp.js') }}"></script><!-- Se carga modulo principal de la página mainApp -->
 
   <style type="text/css">
   #navbar  a {
@@ -46,8 +46,11 @@
         </div>
    </div>
 </nav>
-<div class="container col-lg-10 col-md-offset-1" style="border-top: 5px solid #F34744;background: WHITE;padding-left: 50px;padding-right: 50px">
-	@yield('content')
+@yield('controller')
+    <div class="container col-lg-10 col-md-offset-1" style="border-top: 5px solid #F34744;background: WHITE;padding-left: 50px;padding-right: 50px">
+    	@yield('content')
+    </div>
 </div>
+@extends('loadControllers')
 </body>
 </html>
