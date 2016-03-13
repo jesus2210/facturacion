@@ -1,26 +1,36 @@
 @extends('base')
-@section('controller')
-	<div class="container" ng-app="mainApp" ng-controller="partnerController">
-@endsection
 @section('content')
 	<div class="table-responsive">
 			<table class="table table-hover">
 				<thead>
-					<tr >
+					<tr>
 						<th>Nombre</th>
-						<th>Direccion</th>
+						<th>Pais</th>
+						<th>Tax</th>
 						<th>E-mail</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="partner in partners">
-						<td>@{{ partner.name }}</td>
-						<td>@{{ partner.address }}</td>
-						<td>@{{ partner.mail }}</td>
-					</tr>
+			@foreach ($result as $resu)
+				<tr>
+					<td>
+						{{$resu->name}}
+					</td>
+					<td>
+						{{$resu->country}}
+					</td>
+					<td>
+						{{$resu->tax}}
+					</td>
+					<td>
+						{{$resu->email}}
+					</td>
+				</tr>
+				@endforeach
 				</tbody>
 			</table>
 	</div>
 @endsection
+
 <a href="#tm-top-d" data-uk-smooth-scroll="{offset: 70}" style="position: fixed;bottom:20px;right: 20px;"><h1><i class="glyphicon glyphicon-plus-sign "></i></h1></a>
 

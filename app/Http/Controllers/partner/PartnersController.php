@@ -20,7 +20,6 @@ class PartnersController extends Controller
     public function getAllPartner()
     {
     	$result = \DB::table('partners')
-    	->select('name','address', 'mail')
     	->orderBy('name', 'ASC')
     	->get();
     	return $result;
