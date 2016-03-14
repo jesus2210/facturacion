@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/><!-- Se carga bootstrap Framework (La librería) -->
+  <title></title>
+  <link rel="stylesheet" href="{{ URL::asset('bootstrap/css/bootstrap.min.css') }}"/><!-- Se carga bootstrap Framework (La librería) -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="{{ URL::asset('bower_components/angular/angular.js') }}"></script><!-- Se carga angular Framework (La librería) -->
   <script type="text/javascript" src="{{ URL::asset('js/mainApp.js') }}"></script><!-- Se carga modulo principal de la página mainApp -->
-
+  
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link rel="stylesheet" href="{{ URL::asset('semantic/semantic.css') }}"/>
+  <script type="text/javascript" src="{{ URL::asset('semantic/semantic.js') }}"></script>
+  
   <style type="text/css">
   #navbar  a {
     color: white;
 }
   </style>
 </head>
-<body style="background: #1F3749;padding-top: 70px;">
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background: #F34744">
+<body style="background: #D8D6D8;padding-top: 70px;">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background: #1F3749">
    <div class="container-fluid" >
       <div class="navbar-header">
         <a class="navbar-brand" href="#">WebSiteName</a>
@@ -47,8 +51,8 @@
    </div>
 </nav>
 @yield('controller')
-    <div class="container col-lg-10 col-md-offset-1" style="border-top: 5px solid #F34744;background: WHITE;padding-left: 50px;padding-right: 50px">
-    	@yield('content')
+    <div class="col-lg-12 ui container segment">
+      @yield('content')
     </div>
 </div>
 @extends('loadControllers')

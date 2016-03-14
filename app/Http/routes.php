@@ -20,6 +20,8 @@ Route::controllers([
 	'companies'	=> 'companies\CompaniesController']);
 
 Route::get('partnersList', 'partner\PartnersController@getAllPartner');
+Route::get('partnerform', 'partner\PartnersController@showPartner');
+Route::get('partnerinfo/{partner_id}', 'partner\PartnersController@getPartnerData');
 
 	
 
