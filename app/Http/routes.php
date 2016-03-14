@@ -22,6 +22,8 @@ Route::controllers([
 Route::get('partnersList', 'partner\PartnersController@getAllPartner');
 Route::get('partnerform', 'partner\PartnersController@showPartner');
 Route::get('partnerinfo/{partner_id}', 'partner\PartnersController@getPartnerData');
+Route::post('updatePartner', 'partner\PartnersController@updatePartner');
+Route::delete('deletePartner/{partner_id}', 'partner\PartnersController@deletePartner');
 
 	
 

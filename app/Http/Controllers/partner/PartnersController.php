@@ -4,16 +4,14 @@ namespace facturacion\Http\Controllers\partner;
 
 use Illuminate\Http\Request;
 use facturacion\User;
-use facturacion\Http\Requests;
+use facturacion\Partner;
 use facturacion\Http\Controllers\Controller;
 
 class PartnersController extends Controller
 {
 
-    //
     public function getIndex()
     {
-//      dd($result);
         return view('partners.partner_list');
     }
 
@@ -36,5 +34,19 @@ class PartnersController extends Controller
         ->where('id', $partner_id)
         ->get();
         return $result;
+    }
+
+    public function updatePartner(Request $request)
+    {
+        $partner_id = $request->input('id');
+        $partner_obj = Partner::find($partner_id);
+        $partner_data = $request->all();
+        $partner_obj->update($partner_data);
+        $partner_obj->save();
+    }
+
+    public function deletePartner($partner_id)
+    {
+        Partner::destroy($partner_id);
     }
 }
