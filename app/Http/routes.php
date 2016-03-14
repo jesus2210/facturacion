@@ -19,6 +19,10 @@ Route::controllers([
 	'partners'	=> 'partner\PartnersController',
 	'companies'	=> 'companies\CompaniesController']);
 
+Route::get('partnersList', 'partner\PartnersController@getAllPartner');
+
+	
+
 
 /*
 |--------------------------------------------------------------------------
