@@ -27,7 +27,7 @@ class ProductsController extends Controller
 
     public function showProduct()
     {
-        return view('partners.ProductsForm');
+        return view('products.ProductsForm');
     }
 
     public function getProductData($product_id)
@@ -41,7 +41,7 @@ class ProductsController extends Controller
     public function updateProduct(Request $request)
     {
         $product_id = $request->input('id');
-        $product_obj = Product::find($product_id);
+        $product_obj = Products::find($product_id);
         $product_data = $request->all();
         $product_obj->update($product_data);
         $product_obj->save();

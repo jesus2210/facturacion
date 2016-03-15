@@ -42,7 +42,7 @@
       <div class="two fields">
         <div class="field">
           <label>Descripcion</label>
-          <input type="text" ng-show="edit" name="description" placeholder="Descripcion" ng-model="prodctData.description">
+          <input type="text" ng-show="edit" name="description" placeholder="Descripcion" ng-model="productData.description">
           <div ng-show="!edit" class="ui orange large label">@{{ productData.description }}</div>
 
         </div>

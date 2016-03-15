@@ -28,9 +28,9 @@ Route::post('updatePartner', 'partner\PartnersController@updatePartner');
 Route::delete('deletePartner/{partner_id}', 'partner\PartnersController@deletePartner');
 
 //routes for products views
-Route::get('productslist', 'products\ProductsController@getAllProducts');
+Route::get('productlist', 'products\ProductsController@getAllProducts');
 Route::get('productform',  'products\ProductsController@showProduct');
-Route::get('productinfo/{product_id}', 'products\ProductsController@getDataProduct');
+Route::get('productinfo/{product_id}', 'products\ProductsController@getProductData');
 Route::post('updateProduct', 'products\ProductsController@updateProduct');
 Route::delete('deleteProduct/{product_id}', 'products\ProductsController@deleteProduct');
 

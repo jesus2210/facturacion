@@ -16,6 +16,8 @@ angular.module('mainApp')
         deletePartner : function(partner_id){
           return $http.delete('deletePartner/' + partner_id)
         },
+
+        //code for product controller
         getProducts : function(){
           return $http.get('productlist')
         },
@@ -34,5 +36,4 @@ angular.module('mainApp')
 
         }
     }
-
-});
+);
