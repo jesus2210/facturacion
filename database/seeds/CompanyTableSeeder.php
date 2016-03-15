@@ -13,11 +13,10 @@ class CompanyTableSeeder extends Seeder
     {
         //
         $faker = Faker::create();
-    	for ($i = 0; $i < 30; $i ++ )
+    	for ($i = 0; $i < 10; $i ++ )
    		{ 		
 	    	\DB::table('companies')->insert(array(
 	    		'name'		=> $faker->firstName,
-	    		'address'	=> $faker->secondaryAddress,
 	    		'street'	=> $faker->secondaryAddress,
 	    		'street2'	=> $faker->secondaryAddress,
 	    		'city'		=> $faker->cityPrefix,
@@ -25,8 +24,8 @@ class CompanyTableSeeder extends Seeder
 	    		'country'	=> $faker->cityPrefix,
 	    		'email'	    => $faker->unique()->email,
 	    		'phone'		=> $faker->phoneNumber,
-	    		'tax'		=> $faker->swiftBicNumber,
-	    		'fax'		=> $faker->phoneNumber,
+	    		'rfc'		=> $faker->swiftBicNumber,
+	    		'zip'		=> $faker->swiftBicNumber,
 	    		));
     	 }
     }

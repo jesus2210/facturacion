@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration
+class CreateInvoiceLinesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,22 +12,23 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        //create table products
-           Schema::create('products', function (Blueprint $table) {
+        //create table invoice_lines
+        Schema::create('invoice_lines', function(Blueprint $table){
             $table->increments('id');
             $table->string('name');
             $table->text('description');
-			$table->binary('img');
-			$table->float('unit_cost');
-			$table->integer('company_id')->unsigned();
-            $table->foreign('company_id')
+            $table->float('unit_cost');
+            $table->integer('qty');
+            $table->float('total_cost');
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')
                   ->references('id')
-                  ->on('companies')
+                  ->on('products')
                   ->onDelete('cascade');
             $table->timestamps();
         });
     }
-     
+
     /**
      * Reverse the migrations.
      *
@@ -36,6 +37,6 @@ class CreateProductsTable extends Migration
     public function down()
     {
         //
-        Schema::drop('products');
+        Schema::drop('invoice_lines');
     }
 }
