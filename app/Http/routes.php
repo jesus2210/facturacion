@@ -17,16 +17,22 @@ Route::get('/', function () {
 
 Route::controllers([
 	'partners'	=> 'partner\PartnersController',
+	'products'	=> 'products\ProductsController',
 	'companies'	=> 'companies\CompaniesController']);
 
+//routes for partners views
 Route::get('partnersList', 'partner\PartnersController@getAllPartner');
 Route::get('partnerform', 'partner\PartnersController@showPartner');
 Route::get('partnerinfo/{partner_id}', 'partner\PartnersController@getPartnerData');
 Route::post('updatePartner', 'partner\PartnersController@updatePartner');
 Route::delete('deletePartner/{partner_id}', 'partner\PartnersController@deletePartner');
 
-	
-
+//routes for products views
+Route::get('productslist', 'products\ProductsController@getAllProducts');
+Route::get('productform',  'products\ProductsController@showProduct');
+Route::get('productinfo/{product_id}', 'products\ProductsController@getDataProduct');
+Route::post('updateProduct', 'products\ProductsController@updateProduct');
+Route::delete('deleteProduct/{product_id}', 'products\ProductsController@deleteProduct');
 
 /*
 |--------------------------------------------------------------------------

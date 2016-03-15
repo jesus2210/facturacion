@@ -15,6 +15,24 @@ angular.module('mainApp')
         },
         deletePartner : function(partner_id){
           return $http.delete('deletePartner/' + partner_id)
+        },
+        getProducts : function(){
+          return $http.get('productlist')
+        },
+        getFormProduct : function(){
+          return $http.get('productform')
+        },
+        getDataProduct : function(product_id){
+          return $http.get('productinfo/' + product_id)
+        },
+        updateProduct : function(products){
+          return $http.post('updateProduct', products)
+        },
+        deleteProduct : function(product_id){
+          return $http.delete('deleteProduct/' + product_id)
+        }
+
         }
     }
+
 });

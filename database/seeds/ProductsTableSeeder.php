@@ -29,7 +29,7 @@ class ProductsTableSeeder extends Seeder
     	\DB::table('products')->insert(array(
     		'name'				=> $faker->firstName,
     		'description'		=> $faker->catchPhrase,
-    		'img'				=> $faker->image,
+    		'img'				=> $faker->imageUrl(600, 600, 'food'),
     		'unit_cost'			=> $faker->randomFloat,
             'company_id'        => $company_id
     		));
