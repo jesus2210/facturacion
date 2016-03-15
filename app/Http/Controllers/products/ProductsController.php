@@ -49,6 +49,6 @@ class ProductsController extends Controller
 
     public function deleteProduct($product_id)
     {
-        Product::destroy($product_id);
+        Products::destroy($product_id);
     }
 }
