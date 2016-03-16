@@ -14,7 +14,7 @@ angular.module('mainApp')
 		$scope.init();
     }
 )
-    .controller('partnerformController', function ($scope, appfactory, $location,$window) {
+    .controller('partnerformController', function ($scope, appfactory, $location, $window) {
     	$scope.init = function() {
 			appfactory.getDataPartner($location.search().id)
 			.success(function($data){
@@ -35,7 +35,6 @@ angular.module('mainApp')
 		}
 
 		$scope.delete_partner = function(partner_id) {
-			console.log(partner_id);
 			appfactory.deletePartner(partner_id)
 			.success(function($data){
 				$window.location.href = '/partners';
