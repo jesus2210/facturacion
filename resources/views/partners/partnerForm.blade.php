@@ -30,9 +30,10 @@
       <div class="ui  buttons right floated">
         <button class="ui teal button" ng-show="!edit" ng-click="edit = !edit">Editar</button>
         <button class="ui positive button" ng-show="edit" ng-click="save_change()">Guardar</button>
-        <div class="or"></div>
+        <div class="or" data-text="o"></div>
         <button class="ui negative button" ng-click="delete_confirm()">Eliminar</button>
       </div>
+      <img class="ui small circular image" src="https://s.ytimg.com/yts/img/avatar_720-vflYJnzBZ.png">
       <h4 class="ui dividing header">Información general</h4>
       <div class="field">
         <label>Nombre</label>
